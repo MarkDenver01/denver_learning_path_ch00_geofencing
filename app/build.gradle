@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.navigation)
     id("kotlin-parcelize")
 }
 
@@ -50,6 +51,7 @@ dependencies {
     implementation libs.androidx.room.testing
     implementation libs.androidx.datastore.preferences
     implementation libs.android.maps.utils
+    implementation libs.androidx.androidx.navigation.safeargs.gradle.plugin
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
@@ -91,4 +93,7 @@ dependencies {
 
     // google maps
     implementation(libs.android.maps.utils)
+
+    // navigation
+    implementation(libs.androidx.androidx.navigation.safeargs.gradle.plugin)
 }

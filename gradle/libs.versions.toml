@@ -33,6 +33,8 @@ roomTesting = "2.7.0-alpha07"
 datastorePreferences = "1.1.1"
 ### map utils
 androidMapsUtils = "3.8.2"
+### navigation
+androidxNavigationSafeargsGradlePlugin = "2.8.0-rc01"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -80,10 +82,14 @@ androidx-datastore-preferences = { group = "androidx.datastore", name = "datasto
 ## map utils
 android-maps-utils = { group = "com.google.maps.android", name = "android-maps-utils", version.ref = "androidMapsUtils" }
 
+## navigation
+androidx-androidx-navigation-safeargs-gradle-plugin = { group = "androidx.navigation.safeargs", name = "androidx.navigation.safeargs.gradle.plugin", version.ref = "androidxNavigationSafeargsGradlePlugin" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
+navigation = { id = "androidx.navigation.safeargs", version.ref ="androidxNavigationSafeargsGradlePlugin"}
 
