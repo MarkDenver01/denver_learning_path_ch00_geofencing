@@ -1,4 +1,4 @@
-package com.example.denver_learning_path_ch00_geofencing.data.datasource.local
+package com.example.denver_learning_path_ch00_geofencing.data.repository
 
 import com.example.denver_learning_path_ch00_geofencing.data.datasource.local.database.dao.GeofenceDao
 import com.example.denver_learning_path_ch00_geofencing.data.datasource.local.database.entity.GeofenceEntity
@@ -8,11 +8,11 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 @ViewModelScoped
-class LocalDataSource @Inject constructor(
+class DatabaseRepository @Inject constructor(
     private val geofenceDao: GeofenceDao
 ) : Geofence {
 
-    override suspend fun readGeofence(): Flow<MutableList<GeofenceEntity>> =
+    val readGeofence: Flow<MutableList<GeofenceEntity>> =
         geofenceDao.readGeofence()
 
 

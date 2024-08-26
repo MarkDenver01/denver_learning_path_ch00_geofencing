@@ -5,8 +5,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface Geofence {
 
-    suspend fun readGeofence(): Flow<MutableList<GeofenceEntity>>
-
     suspend fun addGeofence(geofenceEntity: GeofenceEntity)
 
     suspend fun removeGeofence(geofenceEntity: GeofenceEntity)

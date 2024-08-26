@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface GeofenceDao {
     @Query("SELECT * FROM geofence_table ORDER by id ASC")
-    suspend fun readGeofence(): Flow<MutableList<GeofenceEntity>>
+    fun readGeofence(): Flow<MutableList<GeofenceEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addGeofence(geofenceEntity: GeofenceEntity)
