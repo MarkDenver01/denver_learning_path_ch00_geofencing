@@ -9,6 +9,35 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.9.1"
 constraintlayout = "2.1.4"
+### ksp
+kspVersion = "2.0.10-1.0.24"
+### hilt
+hiltVersion = "2.52"
+hiltNavigationCompose = "1.2.0"
+### coroutines
+coroutinesVersion = "1.8.1"
+### lifecycle
+lifecycleVersion = "2.8.4"
+### coil
+coilVersion = "2.7.0"
+### places SDK
+places = "3.5.0"
+### volley
+volley = "1.2.1"
+### room
+roomRuntime = "2.7.0-alpha07"
+roomCompiler = "2.7.0-alpha07"
+roomKtx = "2.7.0-alpha07"
+roomTesting = "2.7.0-alpha07"
+### data store
+datastorePreferences = "1.1.1"
+### map utils
+androidMapsUtils = "3.8.2"
+### navigation
+androidxNavigationSafeargsGradlePlugin = "2.8.0-rc01"
+easypermissionsKtx = "1.0.0"
+### easy permissions
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -20,7 +49,53 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
+### hilt
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltVersion" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltVersion" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hiltVersion" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
+### Coroutines
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutinesVersion" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesVersion" }
+
+### lifecycle
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleVersion" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleVersion" }
+
+## coil
+coil-kt = { module = "io.coil-kt:coil-compose", version.ref = "coilVersion" }
+
+## places-sdk
+places = { group = "com.google.android.libraries.places", name = "places", version.ref = "places" }
+
+## volley
+volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
+
+## room
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomRuntime" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomCompiler" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
+androidx-room-testing = { group = "androidx.room", name = "room-testing", version.ref = "roomTesting" }
+
+## data store
+androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastorePreferences" }
+
+## map utils
+android-maps-utils = { group = "com.google.maps.android", name = "android-maps-utils", version.ref = "androidMapsUtils" }
+
+## navigation
+androidx-androidx-navigation-safeargs-gradle-plugin = { group = "androidx.navigation.safeargs", name = "androidx.navigation.safeargs.gradle.plugin", version.ref = "androidxNavigationSafeargsGradlePlugin" }
+easypermissions-ktx = { group = "com.vmadalin", name = "easypermissions-ktx", version.ref = "easypermissionsKtx" }
+
+
+## easy permissions
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
+navigation = { id = "androidx.navigation.safeargs", version.ref = "androidxNavigationSafeargsGradlePlugin" }
 
